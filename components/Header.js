@@ -41,8 +41,8 @@ function classNames(...classes) {
 export default function Header() {
   return (
     <Popover className="relative z-20">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6">
-      <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 border-b-2 border-blue-500">
+      <div className="flex justify-between items-center py-6 md:justify-between">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Link href="/">
             <a>
@@ -62,11 +62,22 @@ export default function Header() {
           
         </div>
         <div className="md:hidden">
-          <Popover.Button className="bg-blue-500 rounded-md p-2 inline-flex items-center justify-center text-gray-100 hover:text-gray-500 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+          <Popover.Button className="bg-blue-500 rounded-md p-2 inline-flex items-center justify-center text-gray-100 hover:text-gray-500 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-600">
             <span className="sr-only">Open menu</span>
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
         </div>
+        <ul className="hidden md:flex md:space-x-2 font-semibold text-blue-500">
+          <li>
+            <Link href="/projects"><a>Projects</a></Link>
+          </li>
+          <li>
+            <Link href="/about"><a>About</a></Link>
+          </li>
+          <li>
+            <Link href="/contact"><a>Contact</a></Link>
+          </li>
+        </ul>
         
       </div>
     </div>
