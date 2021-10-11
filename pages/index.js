@@ -1,34 +1,42 @@
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
+import { Transition } from '@headlessui/react'
+
 
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen bg-gradient-radial from-green-300 via-blue-400 to-green-500 animate-gradient-xy place-items-center">
-      <Head> 
-        <title>Ozzy Em Web Development</title>
-        <meta name="description" content="Website Design and Development" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className="p-8 rounded bg-gray-100 mx-auto space-y-5">
-        <h1 className="text-5xl font-bold leading-10">Ozzy Medina Frontend Web Developer</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus quas atque magni et iste libero, ab quos sapiente harum labore incidunt dicta officiis illo nemo.</p>
-        <div className="flex gap-4">
-          <button>
-            <Link href="#">
-              <a>See Our Work</a>
-            </Link>
-          </button>
-          
-          <button>
-            <Link href="#">
-              <a>Work With Us</a>
-            </Link>
-          </button>
-        </div>
-      </main>
+    <div className="grid place-items-center min-h-screen">      
+      <Transition
+        appear={true}
+        show      
+        enter="transition ease-out duration-500"
+        enterFrom="opacity-0 translate-y-1"
+        enterTo="opacity-100 translate-y-0"
+        leave="transition ease-in duration-450"
+        leaveFrom="opacity-100 translate-y-0"
+        leaveTo="opacity-0 translate-y-1"
+      >
+        <section className="p-8 rounded space-y-10">
+          <div className="uppercase tracking-tight font-fancy">
+            <h1 className="text-3xl font-extrabold leading-6">Oswaldo Medina</h1>
+            <h3 className="text-xl font-bold text-blue-600">Frontend Developer</h3>
+          </div>
+          <p className="leading-6 text-grey-500 font-semibold text-xl">I create smooth, performant, eye-catching web applications that increase brand value and digital outreach.</p>
+          <div className="flex gap-4 font-fancy">
+            <button>
+              <Link href="/projects">
+                <a>My Projects</a>
+              </Link>
+            </button>
+            
+            <button>
+              <Link href="/contact">
+                <a>Get In Touch</a>
+              </Link>
+            </button>
+          </div>
+        </section>
+      </Transition>
     </div>
   )
 }

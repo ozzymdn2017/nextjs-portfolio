@@ -4,8 +4,10 @@
 
 @layer base {
   button {
-    @apply bg-green-500/50;
-    @apply px-4;
-    @apply py-2;
+    @apply bg-gradient-to-tr from-indigo-400 to-blue-400 px-4 py-2 rounded font-semibold;
+  }
+
+  button a {
+    @apply uppercase;
   }
 }
