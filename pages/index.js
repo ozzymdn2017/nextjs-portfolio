@@ -23,7 +23,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-blue-600 md:text-3xl">Frontend Developer</h3>
           </div>
          
-          <p className="leading-6 text-grey-500 font-semibold text-xl md:text-2xl">I create smooth, performant, eye-catching web applications that increase brand value and digital outreach.</p>
+          <p className="leading-6 text-grey-500 font-semibold text-xl md:text-2xl">I create smooth, performant, eye-catching web applications that increase brand value and online outreach.</p>
           <div className="flex gap-4 font-fancy">
             <button>
               <Link href="/projects">
