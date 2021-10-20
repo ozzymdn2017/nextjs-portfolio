@@ -1,26 +1,26 @@
 import Link from 'next/link'
 import  Image  from 'next/image'
-import { Transition } from '@headlessui/react'
+import { motion } from 'framer-motion'
 
 
+const variants = {
+  hidden: { opacity: 0, x:-100},
+  enter: { opacity: 1, x:0},
+  exit: { opacity: 0, x:0}
+}
 
 export default function Home() {
   return (
-    <div className="grid place-items-center min-h-screen">      
-      <Transition
-        appear={true}
-        show      
-        enter="transition ease-out duration-500"
-        enterFrom="opacity-0 translate-y-1"
-        enterTo="opacity-100 translate-y-0"
-        leave="transition ease-in duration-450"
-        leaveFrom="opacity-100 translate-y-0"
-        leaveTo="opacity-0 translate-y-1"
-      >
+    <motion.div className="grid place-items-center min-h-screen"
+      variants={variants}
+      initial="hidden"
+      animate="enter"
+      exit="exit"
+    >      
         <section className="p-8 rounded space-y-8">
           <div className="uppercase tracking-tight font-fancy relative">
             <h1 className="text-4xl font-extrabold leading-6 md:text-5xl">Oswaldo Medina</h1>
-            <h3 className="text-2xl font-bold text-blue-600 md:text-3xl">Frontend Developer</h3>
+            <h3 className="text-2xl font-bold md:text-3xl">Frontend Developer</h3>
           </div>
          
           <p className="leading-6 text-grey-500 font-semibold text-xl md:text-2xl">I create smooth, performant, eye-catching web applications that increase brand value and online outreach.</p>
@@ -38,7 +38,6 @@ export default function Home() {
             </button>
           </div>
         </section>
-      </Transition>
-    </div>
+    </motion.div>
   )
 }
