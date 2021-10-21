@@ -18,12 +18,9 @@ const variants = {
   },
 }
 
-
-
-
 export default function Home() {
   return (
-    <motion.div className="grid place-items-center min-h-screen"
+    <motion.div className="grid place-items-center relative min-h-screen"
       variants={variants}
       initial="hidden"
       animate="visible"
@@ -56,6 +53,14 @@ export default function Home() {
           </motion.button>
         </div>
       </section>
+      <div className="absolute bottom-0 opacity-40 h-64 w-64 md:bottom-10 md:right-10 md:h-96 md:w-96">
+        <Image 
+        src='/developer.svg'
+        alt='Coding developer'
+        layout="fill"
+        />
+      </div>
+      
     </motion.div>
   )
 }
