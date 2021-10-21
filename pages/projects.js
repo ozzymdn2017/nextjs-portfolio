@@ -31,9 +31,18 @@ const projects = [
 ]
 
 const variants = {
-  hidden: { opacity: 0, x:-100},
-  enter: { opacity: 1, x:0},
-  exit: { opacity: 0, x:0}
+  hidden: { 
+    opacity: 0, 
+    y: 100,
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+  },
+  exit: { 
+    opacity: 0, 
+    y: -100
+  },
 }
 
 export default function ProjectPage() {
@@ -41,13 +50,13 @@ export default function ProjectPage() {
     <motion.div className="relative"
       variants={variants}
       initial="hidden"
-      animate="enter"
+      animate="visible"
       exit="exit"
     >
       <h1 className="text-6xl font-extrabold pl-4 mt-6 font-fancy">Projects</h1>
       {projects.map((project) => 
         <section key={project.id} className="my-12 grid grid-cols-12 relative">
-          <div className="col-span-8 filter contrast-150 rounded-2xl aspect-w-3 aspect-h-4">
+          <div className="col-start-1 col-end-9 filter contrast-150 rounded-2xl aspect-w-3 aspect-h-4">
             <Image src={project.imageSrc}  alt={project.alt} layout="fill" quality={65} />
           </div>
           <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 ">{project.name}</h3>

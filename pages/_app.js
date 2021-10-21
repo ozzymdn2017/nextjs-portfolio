@@ -9,8 +9,6 @@ function MyApp({ Component, pageProps }) {
     <Layout>
       <AnimatePresence
         exitBeforeEnter
-        initial={false}
-        onExitComplete={() => window.scrollTo(0,0)}
       >
         <Component {...pageProps}/>
       </AnimatePresence>

@@ -39,11 +39,11 @@ const navItems = [
 export default function Header() {
   return (
     <Popover className="relative z-20">
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 border-b-2 border-blue-500">
+    <div className="max-w-7xl mx-auto px-4 lg:p-0 sm:px-6">
       <div className="flex justify-between items-center py-6 md:justify-between">
         <div className="flex justify-start lg:w-0 lg:flex-1">
           <Link href="/">
-            <a className="font-bold font-fancy text-3xl text-gray-800 hover:text-blue-400">
+            <a className="font-bold font-fancy text-4xl text-gray-800 hover:text-blue-400">
               Ozzy Em
             </a>
           </Link>
@@ -56,7 +56,7 @@ export default function Header() {
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
         </div>
-        <ul className="hidden md:flex md:space-x-2 font-semibold text-blue-500">
+        <ul className="hidden text-xl space-x-2 md:flex font-semibold text-blue-500">
           <li>
             <Link href="/projects"><a>Projects</a></Link>
           </li>
@@ -86,13 +86,8 @@ export default function Header() {
             <div className="flex items-center justify-between">
               <div>
               <Link href="/">
-                <a className="h-8 w-auto sm:h-10">
-                  <Image
-                    src="https://tailwindui.com/img/logos/workflow-mark-blue-600.svg"
-                    alt="Workflow"
-                    width={48}
-                    height={48}
-                  />
+                <a className="font-bold font-fancy text-4xl text-gray-800">
+                  Ozzy Em
                 </a>
               </Link>
               </div>

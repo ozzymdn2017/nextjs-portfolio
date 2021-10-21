@@ -1,9 +1,18 @@
 import { motion } from 'framer-motion'
 
 const variants = {
-  hidden: { opacity: 0, x:-100},
-  enter: { opacity: 1, x:0},
-  exit: { opacity: 0, x:0}
+  hidden: { 
+    opacity: 0, 
+    y: 100
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0
+  },
+  exit: { 
+    opacity: 0, 
+    y: -100
+  },
 }
 
 export default function about() {
@@ -11,7 +20,7 @@ export default function about() {
     <motion.div className="grid place-content-center p-4 max-w-7xl"
       variants={variants}
       initial="hidden"
-      animate="enter"
+      animate="visible"
       exit="exit"
     >
       <h1 className="text-7xl mb-4 font-fancy font-bold">About Me</h1>

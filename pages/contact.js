@@ -5,9 +5,18 @@ import {
 } from '@heroicons/react/outline'
 
 const variants = {
-  hidden: { opacity: 0, x:-100},
-  enter: { opacity: 1, x:0},
-  exit: { opacity: 0, x:0}
+  hidden: { 
+    opacity: 0, 
+    y: 100
+  },
+  visible: { 
+    opacity: 1, 
+    y: 0
+  },
+  exit: { 
+    opacity: 0, 
+    y: -100
+  },
 }
 
 export default function contact() {
@@ -15,7 +24,7 @@ export default function contact() {
     <motion.div className="grid place-content-center space-y-10"
       variants={variants}
       initial="hidden"
-      animate="enter"
+      animate="visible"
       exit="exit"
     >
       <h1 className="text-7xl text-center font-fancy uppercase tracking-tighter">Get In Touch</h1>
