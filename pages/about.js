@@ -17,7 +17,7 @@ const variants = {
 
 export default function about() {
   return (
-    <motion.div className="grid place-content-center px-4 max-w-7xl lg:p-0"
+    <motion.div className="grid place-content-center px-4 max-w-7xl md:mx-6 md:px-0 lg:p-0"
       variants={variants}
       initial="hidden"
       animate="visible"
