@@ -26,7 +26,7 @@ export default function Home() {
       animate="visible"
       exit="exit"
     >      
-      <section className="p-6 rounded space-y-8 grid md:grid-cols-3 md:gap-4 max-w-7xl">
+      <section className="p-6 rounded space-y-8 grid md:grid-cols-3 md:gap-4 max-w-7xl lg:p-0">
         <div className="uppercase tracking-tight font-fancy relative md:col-start-1 md:col-end-4">
           <h1 className="text-5xl font-extrabold leading-9 md:text-7xl">Oswaldo Medina</h1>
           <h3 className="text-2xl font-bold md:text-5xl md:ml-1">Jamstack Web Developer</h3>

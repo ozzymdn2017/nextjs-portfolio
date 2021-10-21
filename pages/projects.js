@@ -47,7 +47,7 @@ const variants = {
 
 export default function ProjectPage() {
   return (
-    <motion.div className="relative"
+    <motion.div className="relative max-w-7xl"
       variants={variants}
       initial="hidden"
       animate="visible"
@@ -59,7 +59,7 @@ export default function ProjectPage() {
           <div className="col-start-1 col-end-9 filter contrast-150 rounded-2xl aspect-w-3 aspect-h-4">
             <Image src={project.imageSrc}  alt={project.alt} layout="fill" quality={65} />
           </div>
-          <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 ">{project.name}</h3>
+          <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 md:text-5xl">{project.name}</h3>
           <p className="col-span-full text-2xl tracking-tight leading-8 my-4 p-4">{project.description}</p>
           <div className="flex place-items-center col-span-full place-content-around px-4">
             <Link href={project.github}>

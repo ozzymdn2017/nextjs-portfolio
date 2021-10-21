@@ -56,15 +56,15 @@ export default function Header() {
             <MenuIcon className="h-6 w-6" aria-hidden="true" />
           </Popover.Button>
         </div>
-        <ul className="hidden text-xl space-x-2 md:flex font-semibold text-blue-500">
+        <ul className="hidden text-2xl space-x-2 md:flex font-semibold font-fancy text-blue-500">
           <li>
-            <Link href="/projects"><a>Projects</a></Link>
+            <Link href="/projects"><a className="hover:text-gray-800">Projects</a></Link>
           </li>
           <li>
-            <Link href="/about"><a>About</a></Link>
+            <Link href="/about"><a className="hover:text-gray-800">About</a></Link>
           </li>
           <li>
-            <Link href="/contact"><a>Contact</a></Link>
+            <Link href="/contact"><a className="hover:text-gray-800">Contact</a></Link>
           </li>
         </ul>
         

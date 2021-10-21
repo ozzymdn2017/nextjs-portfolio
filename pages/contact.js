@@ -27,10 +27,10 @@ export default function contact() {
       animate="visible"
       exit="exit"
     >
-      <h1 className="text-7xl text-center font-fancy uppercase tracking-tighter">Get In Touch</h1>
+      <h1 className="text-6xl md:text-8xl text-center font-fancy font-semibold uppercase tracking-tighter">Get In Touch</h1>
       <div className="flex justify-center">
         <InboxInIcon height={32} width={32}/>
-        <p className="uppercase text-2xl">: oamedina1994@gmail.com </p>
+        <p className="uppercase text-2xl md:text-3xl">: oamedina1994@gmail.com </p>
       </div>
     </motion.div>
   )
