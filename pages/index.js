@@ -33,7 +33,7 @@ export default function Home() {
         </div>
         
         <p className="leading-6 text-grey-500 font-semibold text-xl md:text-3xl md:col-span-3">I create smooth, performant, eye-catching web applications that increase brand value and online outreach.</p>
-        <div className="flex gap-4 font-fancy md:col-span-full">
+        <div className="flex gap-4 font-fancy md:col-span-full z-30">
           <motion.button
             whileHover={{scale: 1.1}}
             whileTap={{scale: 0.9}}
