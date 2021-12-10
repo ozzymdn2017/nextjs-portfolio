@@ -15,7 +15,7 @@ const projects = [
     description: 'Photography website created in order to increase online exposure and provide a space for displaying client work.',
     imageSrc: '/lens.jpg',
     alt: 'Camera lens with reflection of Neon shapes',
-    github: '#',
+    github: 'https://github.com/ozzymdn2017/nextjs-jjphoto',
     website: '#'
   },
   {
@@ -25,7 +25,7 @@ const projects = [
     description: 'Auto Repair and Exhaust shop website in order to increase online exposure and give generalized information regarding car maintenance and pricing',
     imageSrc: '/bmw-lifts.jpg',
     alt: 'BMWs in auto repair garage',
-    github: '#',
+    github: 'https://github.com/ozzymdn2017/gato-auto-repair',
     website: '#'
   },
 ]
@@ -53,25 +53,25 @@ export default function ProjectPage() {
       animate="visible"
       exit="exit"
     >
-      <h1 className="text-6xl font-extrabold pl-4 mt-6 font-fancy md:pl-6 lg:pl-0">Projects</h1>
+      <h1 className="text-6xl font-extrabold pl-4 mt-6 font-fancy md:pl-6 lg:pl-0 uppercase">Projects</h1>
       {projects.map((project) => 
         <section key={project.id} className="my-12 grid grid-cols-12 relative">
           <div className="col-start-1 col-end-9 filter contrast-150 rounded-2xl aspect-w-3 aspect-h-4">
             <Image src={project.imageSrc}  alt={project.alt} layout="fill" quality={65} />
           </div>
-          <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 md:text-5xl">{project.name}</h3>
+          <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 md:text-5xl uppercase">{project.name}</h3>
           <p className="col-span-full text-2xl tracking-tight leading-8 my-4 px-4 md:px-6 lg:pl-0">{project.description}</p>
           <div className="flex place-items-center col-span-full place-content-around px-4">
             <Link href={project.github}>
-              <a className=" h-12 w-12 text-gray-900 hover:text-gray-800 z-20">
+              <a className="h-10 w-10 text-gray-900 hover:text-gray-800">
                 <FontAwesomeIcon icon={faGithubSquare} />
               </a>
             </Link>
-            <Link href={project.github}>
-              <a className="h-12 w-12 text-gray-900 hover:text-gray-800 z-20">
+            {/* <Link href={project.website}>
+              <a className="h-10 w-10 text-gray-900 hover:text-gray-800">
                 <FontAwesomeIcon icon={faGlobe} />
               </a>
-            </Link>
+            </Link> */}
           </div>
         </section>
       )}
