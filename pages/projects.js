@@ -63,8 +63,8 @@ export default function ProjectPage() {
           <p className="col-span-full text-2xl tracking-tight leading-8 my-4 px-4 md:px-6 lg:pl-0">{project.description}</p>
           <div className="flex place-items-center col-span-full place-content-around px-4">
             <Link href={project.github}>
-              <a className="h-10 w-10 text-gray-900 hover:text-gray-800">
-                <FontAwesomeIcon icon={faGithubSquare} />
+              <a className="text-6xl text-gray-900 hover:text-gray-800">
+                <FontAwesomeIcon icon={faGithubSquare}/>
               </a>
             </Link>
             {/* <Link href={project.website}>
