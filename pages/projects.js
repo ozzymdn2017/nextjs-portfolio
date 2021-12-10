@@ -55,11 +55,11 @@ export default function ProjectPage() {
     >
       <h1 className="text-6xl font-extrabold pl-4 mt-6 font-fancy md:pl-6 lg:pl-0 uppercase">Projects</h1>
       {projects.map((project) => 
-        <section key={project.id} className="my-12 grid grid-cols-12 relative">
+        <section key={project.id} className="my-8 grid grid-cols-12">
           <div className="col-start-1 col-end-9 filter contrast-150 rounded-2xl aspect-w-3 aspect-h-4">
             <Image src={project.imageSrc}  alt={project.alt} layout="fill" quality={65} />
           </div>
-          <h3 className="text-3xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 md:text-5xl uppercase">{project.name}</h3>
+          <h3 className="text-2xl z-10 font-bold leading-8 col-start-9 col-end-13 -ml-20 mt-16 font-fancy text-gray-100 md:text-5xl uppercase">{project.name}</h3>
           <p className="col-span-full text-2xl tracking-tight leading-8 my-4 px-4 md:px-6 lg:pl-0">{project.description}</p>
           <div className="flex place-items-center col-span-full place-content-around px-4">
             <Link href={project.github}>
